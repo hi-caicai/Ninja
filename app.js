@@ -34,7 +34,7 @@ app.get('/', function (req, res) {
 app.get('/status', function (req, res) {
   tcpp.ping({
     address: req.query.url,
-    attempts: 2,
+    attempts: 5,
     port: req.query.port,
     timeout: 2000
   }, function(err, data) {
